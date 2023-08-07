@@ -5,7 +5,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 
 ## Generate 512 bits of Base64 Encoded Text to the screen
 <code>openssl rand -base64 512</code>
-<img src="/images/01-01-openssl-rand-base64-512.png" alt="Generate 512 bits of Base64 Encoded Text to the screen" width=600>
+<img src="/images/01-01-openssl-rand-base64-512.png" alt="" width=600>
 
 ## Generate 512 bits of hex Encoded Text to the screen
 <code>openssl rand -hex 512</code>
