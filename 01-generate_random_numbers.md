@@ -3,6 +3,8 @@ The OpenSSL rand module creates cryptographically secure random numbers.
 
 It is able to create base64 and hex digits, just tell it what you want it to do. 
 
+
+<ol>
 <li>Generate 512 bits of Base64 Encoded Text to the screen</li>
 <br>
 <code>openssl rand -base64 512</code>
@@ -53,3 +55,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
+
+
+
+</ol>
