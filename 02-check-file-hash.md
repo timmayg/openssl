@@ -44,4 +44,4 @@ In this example I've downloaded an IOS image from cisco.com.  Cisco has calculat
 
 <img src="/images/02-05-cisco-file-hashes-WEB.png" alt="" width=300>
 
-<img src="/images/02-06-openssl-file-hashes-WEB.png" alt="" width=300>
+<img src="/images/02-06-openssl-file-hashes-WEB.png" alt="" width=1000>
