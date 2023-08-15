@@ -43,5 +43,5 @@ https://link.testfile.org/30MB
 In this example I've downloaded an IOS image from cisco.com.  Cisco has calculated the file hash and provided it so when we download the file we can guarantee the file is the same. 
 
 <img src="/images/02-05-cisco-file-hashes-WEB.png" alt="" width=300>
-
+You will notice that the MD5 Checksum is the same. The SHA512 checksum on Cisco's website is too long to be completely displayed, however upon review every character that is visible matches the openssl output. 
 <img src="/images/02-06-openssl-file-hashes-WEB.png" alt="" width=1000>
