@@ -42,4 +42,6 @@ https://link.testfile.org/30MB
 
 In this example I've downloaded an IOS image from cisco.com.  Cisco has calculated the file hash and provided it so when we download the file we can guarantee the file is the same. 
 
-<img src="/images/02-05-cisco-file-hashes-WEB.png" alt="SSH Server Configuration Status" width=200>
+<img src="/images/02-05-cisco-file-hashes-WEB.png" alt="" width=300>
+
+<img src="/images/02-06-cisco-file-hashes-WEB.png" alt="" width=300>
