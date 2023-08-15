@@ -37,14 +37,3 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br><br><br>
 
 
-
-<li></li>
-<br>
-<code></code>
-<br><br>
-<img src="/images/" alt="" width=600>
-<br><br><br>
-
-
-
-</ol>
