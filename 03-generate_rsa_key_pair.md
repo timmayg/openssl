@@ -28,11 +28,26 @@ These modules allow OpenSSL to generate new keys, examine existing keys, and gen
 <br><br><br>
 
 <li>Export the RSA Public key from the Private Key</li>
+This command reads the private key, extracts the public key information from it, and then writes the public key to a file in PEM format. The -pubout option tells OpenSSL to output the public key.
 <br>
 <code>openssl rsa -in rsa-enc-private.key -outform PEM -pubout -out rsa-public.key</code>
 <br><br>
 <img src="/images/03-04-openssl-rsa-priv-pub-key-WEB.png" alt="" width=600>
 <br><br><br>
+
+<li>Inspect the RSA Public Key</li>
+If you have a separate public key file (e.g., rsa-public.key) that contains the RSA public key in PEM format, you can inspect it to find out the public key size, the modulus & exponent value. 
+<br>
+<code>openssl rsa -pubin -in rsa-public.key -noout -text</code>
+<br><br>
+<img src="/images/" alt="" width=600>
+<br><br><br>
+
+
+
+
+
+
 
 <li>Generating an RSA Certificate Signing Request</li>
 <br>
