@@ -30,7 +30,7 @@ Note the header, this header provides information about the type of key or data 
 <br><br><br>
 
 <li>Export the RSA Public key from the Private Key</li>
-This command reads the private key, extracts the public key information from it, and then writes the public key to a file in PEM format. The -pubout option tells OpenSSL to output the public key.
+This command reads the private key, extracts the public key information from it, and then writes the public key to a file in PEM format. The -pubout option tells OpenSSL to output the public key. The public key is used to encrypt data, and only the corresponding private key can decrypt it.
 <br>
 <code>openssl rsa -in rsa-enc-private.key -outform PEM -pubout -out rsa-public.key</code>
 <br><br>
@@ -42,7 +42,11 @@ If you have a separate public key file (e.g., rsa-public.key) that contains the 
 <br>
 <code>openssl rsa -pubin -in rsa-public.key -noout -text</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/03-05a-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
+<img src="/images/03-05b-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
+
+
+
 <br><br><br>
 
 
