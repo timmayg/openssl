@@ -38,7 +38,8 @@ This command reads the private key, extracts the public key information from it,
 <br><br><br>
 
 <li>Inspect the RSA Public Key</li>
-If you have a separate public key file (e.g., rsa-public.key) that contains the RSA public key in PEM format, you can inspect it to find out the public key size, the modulus & exponent value. 
+You can inspect the file that contains the RSA public key, to find out the public key size, the modulus & exponent value. <br>
+In an RSA public key, the modulus is a fundamental component that plays a critical role in the encryption and decryption processes. The modulus is a large integer that is derived from the multiplication of two distinct prime numbers. While the modulus is made public, it is computationally infeasible to factor it back into its prime components (the two distinct prime numbers) without the private key. 
 <br>
 <code>openssl rsa -pubin -in rsa-public.key -noout -text</code>
 <br><br>
