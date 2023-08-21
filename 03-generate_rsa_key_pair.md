@@ -22,9 +22,9 @@ Note the header, this header provides information about the type of key or data 
 <img src="/images/03-02-openssl-encrypt-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
 
-<li>Create a 2048 bit RSA Private Key that is encrypted with AES256</li>
+<li>Create a 4096 bit RSA Private Key that is encrypted with AES256</li>
 <br>
-<code>openssl genrsa -aes256 -out rsa-enc-private.key 2048</code>
+<code>openssl genrsa -aes256 -out rsa-enc-private.key 4096</code>
 <br><br>
 <img src="/images/03-03-openssl-genrsa-encrypt-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
