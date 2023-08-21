@@ -6,14 +6,16 @@ These modules allow OpenSSL to generate new keys, examine existing keys, and gen
 
 
 <ol>
-<li>Create a 2048 bit RSA Private Key without a Pass Phrase</li>
+<li>Create a 4096 bit RSA Private Key without a Pass Phrase</li>
+ This private key can be used for various cryptographic operations, including encryption, decryption, and digital signatures. Keys can be various lengths, common lenghts are 2048, 3072 and 4096. Keys can be generated using massive lenghts but these are not practical. OpenSSL will throw an informational error if you attempt to create a private key longer than 16,384 bits.  
 <br>
-<code>openssl genrsa -out rsa-private.key 2048</code>
+<code>openssl genrsa -out rsa-private.key 4096</code>
 <br><br>
 <img src="/images/03-01-openssl-genrsa-out-rsa-private-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Encrypt an Existing Private Key Using AES256</li>
+Note the header, this header provides information about the type of key or data that follows.
 <br>
 <code>openssl rsa -aes256 -in rsa-private.key -out rsa-enc-private.key</code>
 <br><br>
