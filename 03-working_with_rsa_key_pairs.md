@@ -58,7 +58,7 @@ Here we take an existing RSA private key (rsa-private.key) and create a new CSR 
 
 <li>Inspect a Certificate Signing Request</li>
 <br>
-<code></code>
+<code>openssl req -in server-name.csr -noout -text</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
