@@ -5,4 +5,4 @@
 
 [Using OpenSSL to check file hashes for integrity](/02-check_file_hash.md)
 
-[Using OpenSSL to generate an RSA Public Private Key Pair](/03-working_with_rsa_key_pairs.md)
+[Using OpenSSL to work with RSA Public & Private Keys](/03-working_with_rsa_key_pairs.md)
