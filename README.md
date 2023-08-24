@@ -7,7 +7,7 @@
 
 [Using OpenSSL to work with RSA Public & Private Keys](/03-working_with_rsa_key_pairs.md)
 
-[COMING SOON - Using OpenSSL to work with Elliptic Curve Public & Private Keys](/04-working_with_ec_key_pairs.md)
+[Using OpenSSL to work with Elliptic Curve Public & Private Keys](/04-working_with_ec_key_pairs.md)
 
 [COMING SOON - Creating an OpenSSL based Certificate Authority with Elliptic Curve Keys](/05-ec_signing.md)
 

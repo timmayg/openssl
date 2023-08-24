@@ -49,23 +49,6 @@ In an RSA public key, the modulus is a fundamental component that plays a critic
 <img src="/images/03-05b-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
 <br><br><br>
 
-<li>Generating an Certificate Signing Request</li>
-Here we take an existing RSA private key (rsa-private.key) and create a new CSR (server-name.csr). An interactive process will generate the CSR. CSRs are commonly used to request digital certificates from a Certificate Authority (CA) to secure websites and services.
-<br>
-<code>openssl req -new -keyform PEM -key rsa-private.key -out server-name.csr</code>
-<br><br>
-<img src="/images/03-06-openssl-req-csr-WEB.png" alt="" width=600>
-<br><br><br>
-
-
-<li>Inspect a Certificate Signing Request</li>
-<br>
-<code>openssl req -in server-name.csr -noout -text</code>
-<br><br>
-<img src="/images/" alt="" width=600>
-<br><br><br>
-
-
 <li>Inspect a Private Key that is in a File</li>
 <br>
 <code>openssl rsa -text -noout</code>
