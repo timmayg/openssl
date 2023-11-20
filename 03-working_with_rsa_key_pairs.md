@@ -58,7 +58,7 @@ OpenSSL can accept data directly from the command line. This works well when the
 <br><br><br>
 
 <li>Inspect a Private Key from the Command Line</li>
-Private keys contain several key components. Two large prime numbers (p) and (q).A modulus which is the product of the two primes. A Private and a Public Exponent and other exponents. 
+Private keys contain several key components. Two large prime numbers (p) and (q).A modulus which is the product of the two primes. A Private and a Public Exponent and other exponents. Besides storing it VERY SECURELY you likely won't do much with private keys. 
 <br>
 <code>openssl rsa -in rsa-private.key -text -noout</code>
 <br><br>

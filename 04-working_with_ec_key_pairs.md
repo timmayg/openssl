@@ -2,6 +2,9 @@
 
 Working with Elliptic Curve Key Pairs
 
+Version 2.0.1, Section 6.1.5 Key Sizes, of the CA Browser Forums Baseline Requirements states "For ECDSA key pairs, the CA SHALL: Ensure that the key represents a valid point on the NIST P‐256, NIST P‐384 or NIST P‐521 elliptic curve. No other algorithms or key sizes are permitted." Therefore these are the only curves we will discuss. 
+https://cabforum.org/wp-content/uploads/CA-Browser-Forum-BR-v2.0.1.pdf
+
 
 <ol>
 <li>Viewing all the Supported EC Curves, now which one to use ??? </li>
@@ -35,10 +38,10 @@ Note: In the below examples we need to pipe the ecparam module output to the ec 
 <br><br><br>
 
 
-Note: Compatible EC curves are listed below.  Others should be avoided unless otherwise noted. 
-•	prime256v1: X9.62/SECG curve over a 256-bit prime field
-•	secp384r1 : NIST/SECG curve over a 384-bit prime field
-•	secp521r1 : NIST/SECG curve over a 521-bit prime field
+Note: Compatible EC curves are listed below.  Others should be avoided unless otherwise noted. <br>
+•	prime256v1: X9.62/SECG curve over a 256-bit prime field<br>
+•	secp384r1 : NIST/SECG curve over a 384-bit prime field<br>
+•	secp521r1 : NIST/SECG curve over a 521-bit prime field<br>
 
 
 

@@ -11,7 +11,7 @@ Here we take an existing RSA private key (rsa-private.key) and create a new CSR 
 <br>
 <code>openssl req -new -keyform PEM -key rsa-private.key -out server-name.csr</code>
 <br><br>
-<img src="/images/03-06-openssl-req-csr-WEB.png" alt="" width=600>
+<img src="/images/06-01-openssl-req-csr-WEB.png" alt="" width=600>
 <br><br><br>
 
 
