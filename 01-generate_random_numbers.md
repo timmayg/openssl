@@ -9,7 +9,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br>
 <code>openssl rand -base64 512</code>
 <br><br>
-<img src="/images/01-01-openssl-rand-base64-512-WEB.png" alt="" width=600>
+<img src="/images/01/01-01-openssl-rand-base64-512-WEB.png" alt="" width=600>
 <br><br><br>
 
 
@@ -17,7 +17,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br>
 <code>openssl rand -hex 512</code>
 <br><br>
-<img src="/images/01-02-openssl-rand-hex-512-WEB.png" alt="" width=600>
+<img src="/images/01/01-02-openssl-rand-hex-512-WEB.png" alt="" width=600>
 <br><br><br>
 
 
@@ -25,7 +25,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br>
 <code>openssl rand -base64 -out random-b64.txt 512</code>
 <br><br>
-<img src="/images/01-03-openssl-rand-base64-out-512-WEB.png" alt="" width=600>
+<img src="/images/01/01-03-openssl-rand-base64-out-512-WEB.png" alt="" width=600>
 <br><br><br>
 
 
@@ -33,7 +33,7 @@ It is able to create base64 and hex digits, just tell it what you want it to do.
 <br>
 <code>openssl rand -hex -out random-hex.txt 512</code>
 <br><br>
-<img src="/images/01-04-openssl-rand-hex-out-512-WEB.png" alt="" width=600>
+<img src="/images/01/01-04-openssl-rand-hex-out-512-WEB.png" alt="" width=600>
 <br><br><br>
 
 

@@ -13,7 +13,7 @@ These modules allow OpenSSL to generate new keys, examine existing keys, and gen
 <br>
 <code>openssl genrsa -out rsa-private.key 4096</code>
 <br><br>
-<img src="/images/03-01-openssl-genrsa-out-rsa-private-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-01-openssl-genrsa-out-rsa-private-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Encrypt an Existing Private Key Using AES256</li>
@@ -21,14 +21,14 @@ Note the header, this header provides information about the type of key or data 
 <br>
 <code>openssl rsa -aes256 -in rsa-private.key -out rsa-enc-private.key</code>
 <br><br>
-<img src="/images/03-02-openssl-encrypt-priv-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-02-openssl-encrypt-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Create a 4096 bit RSA Private Key that is encrypted with AES256</li>
 <br>
 <code>openssl genrsa -aes256 -out rsa-enc-private.key 4096</code>
 <br><br>
-<img src="/images/03-03-openssl-genrsa-encrypt-priv-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-03-openssl-genrsa-encrypt-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Export the RSA Public key from the Private Key</li>
@@ -36,7 +36,7 @@ This command reads the private key, extracts the public key information from it,
 <br>
 <code>openssl rsa -in rsa-enc-private.key -outform PEM -pubout -out rsa-public.key</code>
 <br><br>
-<img src="/images/03-04-openssl-rsa-priv-pub-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-04-openssl-rsa-priv-pub-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Inspect the RSA Public Key</li>
@@ -45,8 +45,8 @@ In an RSA public key, the modulus is a fundamental component that plays a critic
 <br>
 <code>openssl rsa -pubin -in rsa-public.key -noout -text</code>
 <br><br>
-<img src="/images/03-05a-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
-<img src="/images/03-05b-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-05a-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-05b-openssl-rsa-pubin-pub-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Inspect a Private Key, pasted in file data</li>
@@ -54,7 +54,7 @@ OpenSSL can accept data directly from the command line. This works well when the
 <br>
 <code>openssl rsa -text -noout</code>
 <br><br>
-<img src="/images/03-06-openssl-rsa-priv-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-06-openssl-rsa-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Inspect a Private Key from the Command Line</li>
@@ -62,7 +62,7 @@ Private keys contain several key components. Two large prime numbers (p) and (q)
 <br>
 <code>openssl rsa -in rsa-private.key -text -noout</code>
 <br><br>
-<img src="/images/03-07-openssl-rsa-priv-key-WEB.png" alt="" width=600>
+<img src="/images/03/03-07-openssl-rsa-priv-key-WEB.png" alt="" width=600>
 <br><br><br>
 
 
