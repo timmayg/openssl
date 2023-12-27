@@ -22,8 +22,8 @@ NIST P-521: OpenSSL Name: secp521r1<br>
 <br><br><br>
 
 
-<li>Create 256-bit Elliptic Curve Private Key</li>
-In the below examples we need to pipe the ecparam module output to the ec module. This is because the ecparam module writes parameter data to STDOUT.  
+<li>Create 256-bit Elliptic Curve Private Key using NIST P-256</li>
+In the examples where we create a key we need to pipe the ecparam module output to the ec module. This is because the ecparam module writes parameter data to STDOUT. The ec module will take that output and properly write it to a key. 
 <br>
 <code>openssl ecparam -genkey -name prime256v1 | openssl ec -out ec-256-private.key</code>
 <br><br>
@@ -31,7 +31,7 @@ In the below examples we need to pipe the ecparam module output to the ec module
 <br><br><br>
 
 
-<li>Create 384-bit Elliptic Curve Private Key</li>
+<li>Create 384-bit Elliptic Curve Private Key using NIST P-384</li>
 <br>
 <code>openssl ecparam -genkey -name secp384r1 | openssl ec -out ec-384-private.key</code>
 <br><br>
@@ -39,7 +39,7 @@ In the below examples we need to pipe the ecparam module output to the ec module
 <br><br><br>
 
 
-<li>Create 521-bit Elliptic Curve Private Key</li>
+<li>Create 521-bit Elliptic Curve Private Key using NIST P-521</li>
 <br>
 <code>openssl ecparam -genkey -name secp521r1 | openssl ec -out ec-521-private.key</code>
 <br><br>
@@ -85,7 +85,7 @@ Notice that the Public Key that we have exported is exactly the same as we saw i
 <br>
 <code>openssl req -new -keyform PEM -key ec-384-private.key -out test-fqdn.timslab.fun-ec.csr</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/04/openssl-req-new-out-ec-csr-WEB.png" alt="" width=600>
 <br><br><br>
 
 
