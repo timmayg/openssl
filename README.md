@@ -1,5 +1,6 @@
-# openssl - the Cryptography and TLS Toolkit
- Cool Ways to Use OpenSSL
+# OpenSSL - the Cryptography and TLS Toolkit
+
+Cool Ways to Use OpenSSL
 
 [Using OpenSSL to generate random numbers](/01-generate_random_numbers.md)
 
