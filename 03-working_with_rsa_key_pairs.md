@@ -1,10 +1,7 @@
-## UNDER CONSTRUCTION
+# Using OpenSSL to Work with RSA Keys
 
 OpenSSL has modules for working with RSA keys, these modules are genrsa & rsa.  
 These modules allow OpenSSL to generate new keys, examine existing keys, and generally 
-
-
-
 
 
 <ol>
