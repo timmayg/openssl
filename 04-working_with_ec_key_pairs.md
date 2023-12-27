@@ -6,62 +6,86 @@ Version 2.0.1, Section 6.1.5 Key Sizes, of the CA Browser Forums Baseline Requir
 https://cabforum.org/wp-content/uploads/CA-Browser-Forum-BR-v2.0.1.pdf
 
 
+EC Keys are much different than RSA Keys. EC Private Key files only contain a Private and a Public Key, thats it. No exponents, no prime numbers, etc.
+
 <ol>
 <li>Viewing all the Supported EC Curves, now which one to use ??? </li>
+OpenSSL supports a lot of curves. We will stick with the curves that the CA Browser Forum suggests as they are the most commonly supported and very strong.  <br>
+NIST P-256: OpenSSL Name: prime256v1<br>
+NIST P-384: OpenSSL Name: secp384r1<br>
+NIST P-521: OpenSSL Name: secp521r1<br>
 <br>
 <code>openssl ecparam -list_curves</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/04/openssl-ecparam-list-curves-WEB.png" alt="" width=600>
 <br><br><br>
 
-Note: In the below examples we need to pipe the ecparam module output to the ec module. This is because the ecparam module writes parameter data to STDOUT.  
+
+
+
+
 
 <li>Create 256-bit Elliptic Curve Private Key</li>
+In the below examples we need to pipe the ecparam module output to the ec module. This is because the ecparam module writes parameter data to STDOUT.  
 <br>
-<code>openssl ecparam -genkey -name prime256v1 | openssl ec -out ec-private.key</code>
+<code>openssl ecparam -genkey -name prime256v1 | openssl ec -out ec-256-private.key</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/04/openssl-ecparam-genkey-name-prime256v1-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Create 384-bit Elliptic Curve Private Key</li>
 <br>
-<code>openssl ecparam -genkey -name secp384r1 | openssl ec -out ec-private.key</code>
+<code>openssl ecparam -genkey -name secp384r1 | openssl ec -out ec-384-private.key</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/04/openssl-ecparam-genkey-name-secp384r1-WEB.png" alt="" width=600>
 <br><br><br>
 
 <li>Create 521-bit Elliptic Curve Private Key</li>
 <br>
-<code>openssl ecparam -genkey -name secp521r1 | openssl ec -out ec-private.key</code>
+<code>openssl ecparam -genkey -name secp521r1 | openssl ec -out ec-521-private.key</code>
+<br><br>
+<img src="/images/04/openssl-ecparam-genkey-name-secp521r1-WEB.png" alt="" width=600>
+<br><br><br>
+
+
+<li>View the P-386 Private Key in Base64 Format</li>
+<br>
+<code>cat ec-384-private.key</code>
+<br><br>
+<img src="/images/" alt="" width=600>
+<br><br><br>
+
+<li>View the P-386 Private Key with OpenSSL</li>
+<br>
+<code>openssl ec -in ec-384-private.key -noout -text</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
 
 
-Note: Compatible EC curves are listed below.  Others should be avoided unless otherwise noted. <br>
-•	prime256v1: X9.62/SECG curve over a 256-bit prime field<br>
-•	secp384r1 : NIST/SECG curve over a 384-bit prime field<br>
-•	secp521r1 : NIST/SECG curve over a 521-bit prime field<br>
+
+
+
 
 
 
 <li>Export the Elliptic Curve Public Key from the Private Key</li>
 <br>
-<code>openssl ec -in ec-private.key -outform PEM -pubout -out ec-public.key</code>
+<code>openssl ec -in ec-384-private.key -outform PEM -pubout -out ec-384-public.key</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
 
 <li>Generating an Elliptic Curve Certificate Signing Request</li>
 <br>
-<code>openssl req -new -keyform PEM -key ec-private.key -out tims-mac.csr</code>
+<code>openssl req -new -keyform PEM -key ec-384-private.key -out test-fqdn.timslab.fun-ec.csr</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
 
 <li>Evaluating a Certificate or a Certificate Signing Request</li>
 <br>
-<code>openssl req -in tims-mac.csr -text -noout</code>
+<code>openssl req -in test-fqdn.timslab.fun-ec.csr -text -noout</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
