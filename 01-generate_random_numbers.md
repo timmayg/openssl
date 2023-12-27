@@ -1,3 +1,4 @@
+## Using OpenSSL to Generate Random Numbers 
 
 The OpenSSL rand module creates cryptographically secure random numbers. 
 
