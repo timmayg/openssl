@@ -93,7 +93,15 @@ Notice that the Public Key that we have exported is exactly the same as we saw i
 <br>
 <code>openssl req -in test-fqdn.timslab.fun-ec.csr -text -noout</code>
 <br><br>
-<img src="/images/" alt="" width=600>
+<img src="/images/04/openssl-req-in-ec-csr-text-noout-WEB.png" alt="" width=600>
+<br><br><br>
+
+
+<li>Verify the Certificate Signing Request Has Not Been Tampered with</li>
+<br>
+<code>openssl req -in test-fqdn.timslab.fun-ec.csr -text -noout -verify</code>
+<br><br>
+<img src="/images/04/openssl-req-in-ec-csr-text-noout-verify-WEB.png" alt="" width=600>
 <br><br><br>
 
 
