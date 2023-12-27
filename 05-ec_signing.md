@@ -14,7 +14,7 @@ Note: This is an extremely down and dirty CA. What else would you expect???
 
 
 <li>Create a Root Certificate for the CA</li>
-This CA Certificate will be used to sign any Certificate Signing Requests. 
+This CA Certificate will be used to sign any Certificate Signing Requests. Thats it, OpenSSL is now a Certificate Authority and is able to sign CSRs! I told you this would be down and dirty! 
 <br>
 <code>openssl req -x509 -new --key ca-private.key -sha256 -days 1825 -out lab-ec-openssl-ca.pem</code>
 <br><br>
@@ -29,6 +29,24 @@ Certificate Authorities use Self Signed Certificates to sign Certificate Signing
 <br><br>
 <img src="/images/05/openssl-x509-in-lab-ec-ca-noout-text-WEB.png" alt="" width=600>
 <br><br><br>
+
+
+<li>Create an </li>
+<br>
+<code></code>
+<br><br>
+<img src="/images/" alt="" width=600>
+<br><br><br>
+
+
+
+<li>Create a Certificate Signing Request for a ficticious Website</li>
+<br>
+<code>openssl req -new -keyform PEM -key ec-384-private.key -out test-fqdn.timslab.fun-ec.csr</code>
+<br><br>
+<img src="/images/" alt="" width=600>
+<br><br><br>
+
 
 
 <li>Sign a CSR</li>

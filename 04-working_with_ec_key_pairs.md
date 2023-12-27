@@ -82,6 +82,7 @@ Notice that the Public Key that we have exported is exactly the same as we saw i
 
 
 <li>Generating an Elliptic Curve Certificate Signing Request</li>
+When creating a CSR, it is up to the Admin to specify the Country, State, City, Organization, Organizational Unit and the Common Name (FQDN). These are commonly referred to as the Distinguished Name (DN) fields. 
 <br>
 <code>openssl req -new -keyform PEM -key ec-384-private.key -out test-fqdn.timslab.fun-ec.csr</code>
 <br><br>
