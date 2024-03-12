@@ -11,7 +11,16 @@ Here we take an existing RSA private key (rsa-private.key) and create a new CSR 
 <br>
 <code>openssl req -new -keyform PEM -key rsa-private.key -out server-name.csr</code>
 <br><br>
-<img src="/images/06/06-06-openssl-req-csr-WEB.png" alt="" width=600>
+<img src="/images/06/06-01-openssl-req-csr-WEB.png" alt="" width=600>
+<br><br><br>
+
+
+<li>View a Certificate Signing Request</li>
+A CSR is just a text file with Base64 encoded text. This can also be refered to as a PEM file. 
+<br>
+<code>cat server-name.csr</code>
+<br><br>
+<img src="/images/06/06-02-cat-csr-WEB.png" alt="" width=600>
 <br><br><br>
 
 
@@ -51,16 +60,17 @@ Here we take an existing RSA private key (rsa-private.key) and create a new CSR 
 <img src="/images/" alt="" width=600>
 <br><br><br>
 
-<li></li>
+<li>Convert a Full Chain and Private Key to a Binary PKCS12 File</li>
+ACME based servers like Let's Encrypt and Google Public CA provide the end user (us) with certs, full chains, and keys. Sometimes we need to convert these into a single file, a package, a PKCS12! Here is how we can package up the Identity Cert, the CA Certs and the Private Key for importing elsewhere. 
 <br>
-<code></code>
+<code>openssl pkcs12 -export -passout pass:cisco123 -in fullchain.cer -inkey cert.key -out test-timslab-fun.p12</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
 
-<li></li>
+<li>Convery a binary PKCS12 file to a Text based PKCS12</li>
 <br>
-<code></code>
+<code>openssl -in test-timslab-fun.p12 -out test-timslab-fun-txt.p12</code>
 <br><br>
 <img src="/images/" alt="" width=600>
 <br><br><br>
