@@ -69,6 +69,7 @@ ACME based servers like Let's Encrypt and Google Public CA provide the end user 
 <br><br><br>
 
 <li>Convery a binary PKCS12 file to a Text based PKCS12</li>
+Sometimes a PKCS12 file needs to be text based.
 <br>
 <code>openssl -in test-timslab-fun.p12 -out test-timslab-fun-txt.p12</code>
 <br><br>
